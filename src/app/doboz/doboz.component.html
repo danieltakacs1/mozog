@@ -1,0 +1,16 @@
+<div class="box" 
+[ngClass]="eppenMozgatvaVan?'grabbed':'not-grabbed'"  
+
+[ngStyle]="{
+    'left.px':xPozicio,
+    'top.px':yPozicio,
+}"
+
+(mousedown)="eppenMozgatvaVan=true" 
+(mouseup)="eppenMozgatvaVan=false" 
+(mousemove)="dobozDragFolyamatban($event)"
+>
+
+    <h2>Húzd arrébb!</h2>
+
+</div>
